@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pastel Random Message Generator</title>
+
+<style>
+    body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #b5e2fa, #d4f8e8, #fff7ae, #ffd6e8);
+        background-size: 400% 400%;
+        animation: gradientMove 12s ease infinite;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* 🌟 Pastel Glow Card */
+    .card {
+        background: white;
+        padding: 40px;
+        border-radius: 28px;
+        width: 360px;
+        text-align: center;
+        box-shadow: 0 0 25px rgba(255, 182, 193, 0.4),
+                    0 0 35px rgba(173, 216, 230, 0.3),
+                    0 0 45px rgba(255, 255, 153, 0.3),
+                    0 0 55px rgba(193, 255, 193, 0.3);
+        animation: cardGlow 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes cardGlow {
+        0% {
+            box-shadow: 0 0 25px rgba(255,182,193,0.4),
+                        0 0 35px rgba(173,216,230,0.3),
+                        0 0 45px rgba(255,255,153,0.3);
+        }
+        100% {
+            box-shadow: 0 0 30px rgba(193,255,193,0.4),
+                        0 0 40px rgba(255,182,193,0.35),
+                        0 0 50px rgba(173,216,230,0.35);
+        }
+    }
+
+    #message {
+        font-size: 22px;
+        color: #333;
+        margin-bottom: 25px;
+        line-height: 1.4;
+        font-weight: 500;
+    }
+
+    /* 🌈 Rounded Pastel Button */
+    button {
+        background: linear-gradient(135deg, #bfe7ff, #ffd6e8);
+        border: none;
+        padding: 14px 28px;
+        border-radius: 50px;
+        font-size: 17px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        font-weight: 600;
+        color: #333;
+        box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    }
+
+    button:hover {
+        transform: scale(1.08);
+        box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <div id="message">Click the button to get a message 💛</div>
+    <button onclick="generate()">New Message</button>
+</div>
+
+<script>
+    const messages = [
+        "You’re doing better than you think.",
+        "Take a slow breath.",
+        "Your boundaries are valid.",
+        "Healing isn’t linear.",
+        "Small steps count.",
+        "Progress, not perfection.",
+        "You deserve peace.",
+        "Be gentle with yourself today."
+    ];
+
+    function generate() {
+        let random = Math.floor(Math.random() * messages.length);
+        document.getElementById("message").innerText = messages[random];
+    }
+</script>
+
+</body>
+</html>
