@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>New Year Message by Maayra</title>
+<title>A Gentle Message for the Year Ahead</title>
 
 <style>
     body {
         font-family: "Poppins", sans-serif;
-        background: linear-gradient(135deg, #b5e2fa, #d4f8e8, #fff7ae, #ffd6e8);
+        background: linear-gradient(135deg, #b5fff9, #bffaf5, #b9fff9);
         background-size: 400% 400%;
         animation: gradientMove 12s ease infinite;
         min-height: 100vh;
@@ -25,48 +25,42 @@
         100% { background-position: 0% 50%; }
     }
 
-    /* 🌟 Pastel Glow Card */
     .card {
-        background: white;
-        padding: 55px;
+        background: #ccffb5;
+        padding: 60px 45px;
         border-radius: 32px;
-        width: 90%;
+        width: 100%;
         max-width: 520px;
         text-align: center;
-        box-shadow: 
-            0 0 25px rgba(255, 182, 193, 0.4),
-            0 0 35px rgba(173, 216, 230, 0.3),
-            0 0 45px rgba(255, 255, 153, 0.3),
-            0 0 55px rgba(193, 255, 193, 0.3);
-        animation: cardGlow 5s ease-in-out infinite alternate;
+        box-shadow:
+            0 0 30px rgba(255, 241, 92, 0.6),
+            0 0 40px rgba(0, 255, 234, 0.35);
     }
 
-    @keyframes cardGlow {
-        0% {
-            box-shadow:
-                0 0 25px rgba(255,182,193,0.4),
-                0 0 35px rgba(173,216,230,0.3),
-                0 0 45px rgba(255,255,153,0.3);
-        }
-        100% {
-            box-shadow:
-                0 0 30px rgba(193,255,193,0.4),
-                0 0 40px rgba(255,182,193,0.35),
-                0 0 50px rgba(173,216,230,0.35);
-        }
+    h1 {
+        font-size: 26px;
+        color: #026464;
+        margin-bottom: 20px;
+        font-weight: 600;
     }
 
     #message {
         font-size: 24px;
-        color: #333;
+        color: #0a98b1;
         margin-bottom: 35px;
         line-height: 1.6;
         font-weight: 500;
     }
 
-    /* 🌈 Rounded Pastel Button */
+    .brand {
+        margin-top: 30px;
+        font-size: 10px;
+        color: #2d9792;
+        opacity: 0.8;
+    }
+
     button {
-        background: linear-gradient(135deg, #bfe7ff, #ffd6e8);
+        background: #f8f8f8;
         border: none;
         padding: 16px 36px;
         border-radius: 50px;
@@ -74,26 +68,26 @@
         cursor: pointer;
         transition: 0.3s ease;
         font-weight: 600;
-        color: #333;
-        box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+        color: #026669;
+        box-shadow: 0 6px 14px rgba(0,0,0,0.18);
     }
 
     button:hover {
-        transform: scale(1.08);
-        box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+        transform: scale(1.07);
+        box-shadow: 0 9px 18px rgba(0,0,0,0.25);
     }
 
-    /* 📱 Mobile Optimisation */
     @media (max-width: 768px) {
         .card {
-            width: 100%;
-            padding: 70px 30px;
-            border-radius: 28px;
+            padding: 75px 30px;
+        }
+
+        h1 {
+            font-size: 28px;
         }
 
         #message {
             font-size: 26px;
-            line-height: 1.7;
         }
 
         button {
@@ -106,40 +100,29 @@
 <body>
 
 <div class="card">
-    <div id="message">Tap the button to receive a gentle message for the year ahead 💛</div>
-    <button onclick="generate()">New Message</button>
+    <h1>A gentle message for the year ahead</h1>
+
+    <div id="message">    </div>
+
+    <button onclick="generate()">Tap to receive a message</button>
+
+    <div class="brand">
+        by Maayra Emotional Wellness Centre
+    </div>
 </div>
 
 <script>
     const messages = [
-        "You’re doing better than you think.",
-        "Take a slow breath.",
-        "Your boundaries are valid.",
-        "Healing isn’t linear.",
-        "Small steps count.",
-        "Progress, not perfection.",
-        "You deserve peace.",
-        "Be gentle with yourself today.",
-        "It’s okay to move at your own pace.",
-        "Rest is not a reward—it’s a need.",
-        "You don’t have to have it all figured out today.",
-        "Your feelings make sense.",
-        "You are allowed to pause.",
-        "You are not behind in life.",
-        "It’s safe to take up space.",
-        "You don’t need permission to care for yourself.",
-        "You are learning, even on hard days.",
-        "You don’t need to be productive to be worthy.",
-        "Your effort matters.",
-        "You are allowed to change your mind.",
-        "You are more than your difficult moments.",
-        "It’s okay to rest without guilt.",
-        "You don’t have to do this alone.",
-        "Your needs are important.",
-        "You are worthy of kindness and compassion.",
-        "You can take this one step at a time.",
-        "You are allowed to choose yourself.",
-        "This breath can be a reset."
+        "You are allowed to move gently into this year.",
+        "Small steps will still carry you forward.",
+        "Rest is a meaningful part of growth.",
+        "You don’t have to rush your healing.",
+        "This year can unfold at your pace.",
+        "Your effort is enough.",
+        "You are learning, even on quiet days.",
+        "It’s okay to begin slowly.",
+        "You deserve steadiness and care.",
+        "This breath can be your reset."
     ];
 
     function generate() {
@@ -150,4 +133,3 @@
 
 </body>
 </html>
-
